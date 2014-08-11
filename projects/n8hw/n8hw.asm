@@ -335,16 +335,16 @@ CheckJumpPhys:
 CheckJumpButton:
   LDA buttons1
   AND #BUTA
-  ;FIXME <-- 
-  ; temp code to randomize posx
-;  BNE CheckJumpStartJump
-  BEQ CJSJE
-  JSR GenerateRandomNumber
-  LDA rng1
-  STA posy
-  JSR GenerateRandomNumber
-  LDA rng1
-  STA posx
+  ;;FIXME <-- 
+  ;; temp code to randomize posx
+  BNE CheckJumpStartJump
+;  BEQ CJSJE
+; JSR GenerateRandomNumber
+;  LDA rng1
+;  STA posy
+;  JSR GenerateRandomNumber
+;  LDA rng1
+;  STA posx
 CJSJE:
   RTS
 CheckJumpStartJump:
